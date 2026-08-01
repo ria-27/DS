@@ -1,0 +1,30 @@
+//Given an array of n integers and a key element, write a C program to search the element using linear search. 
+
+#include<stdio.h>
+int main() {
+    int i, n, arr[100], target, key = -1;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter %d elements:\n", n);
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Enter target element: ");
+    scanf("%d", &target);
+
+    for(i = 0; i < n; i++) {
+        if(target == arr[i]) {
+            key = i;   // Marks that the element was found
+            printf("Element found at index %d\n", i);
+        }
+    }
+
+    if(key == -1) {
+        printf("Element not found");
+    }
+
+    return 0;
+}
